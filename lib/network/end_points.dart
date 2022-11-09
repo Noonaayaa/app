@@ -1,7 +1,7 @@
 
 
 // End Points for Auth
-const baseUrl = 'https://workshop.orangedigitalcenteregypt.com/api/v1/';
+const baseUrl = 'https://gp.ids-soft.host/api/';
 const loginEndPoint = 'login';
 const registerEndPoint = 'register';
 const universityEndPoint = 'university';

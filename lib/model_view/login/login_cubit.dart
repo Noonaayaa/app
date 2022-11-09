@@ -42,7 +42,7 @@ class LoginCubit extends Cubit<LoginState> {
        user=Login_model.fromJson(value.data);
        if(value.statusCode == 200){
 
-         Token = user!.data!.accessToken.toString();
+         Token = user!.token.toString();
           // toast('welcom', context);
          Flushbar(
               onTap: (Flushbar) {
