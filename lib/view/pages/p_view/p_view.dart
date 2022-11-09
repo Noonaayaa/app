@@ -20,7 +20,8 @@ class _p_viewState extends State<p_view> {
         ),
         backgroundColor: Colors.white,
         body: SafeArea(
-          child: Stack(alignment: Alignment.topCenter, children: [
+          child: Stack(alignment: Alignment.topCenter,
+              children: [
             PageView(
               onPageChanged: (val){
                 setState(() {
