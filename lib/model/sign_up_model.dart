@@ -1,3 +1,5 @@
+import 'dart:io';
+
 class SignUpModel {
 
   SignUpModel({
@@ -20,7 +22,7 @@ class SignUpModel {
   final String email;
   final String password;
   final String userName;
-  final String image;
+  final File image;
   final String idCardImage;
   final String nationalId;
   final String country;

@@ -15,15 +15,18 @@ Widget login_eve_button({
     color: Colors.white,
     child: ElevatedButton(
       onPressed: function,
-      child: Text(
-        "$text",
-        style: TextStyle(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(
+          vertical: 16.0,
+        ),
+        child: Text(
+          "$text",
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: Text_color,
+            fontSize: 20,
 
-
-          fontWeight: FontWeight.bold,
-          color: Text_color,
-          fontSize: 20,
-
+          ),
         ),
       ),
       style: ElevatedButton.styleFrom(
