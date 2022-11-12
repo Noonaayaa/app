@@ -82,6 +82,9 @@ class SignUpCubit extends Cubit<SignUpStates>{
   }
 
 
+
+
+
   File? cameraImage;
   var imagePicker = ImagePicker();
 
