@@ -9,19 +9,21 @@ import 'package:image_picker/image_picker.dart';
 class  SignUp_Screen extends StatelessWidget {
 
   bool bo=true;
-  var fnamecon =TextEditingController();
-  var emailcon=TextEditingController();
-  var passcon=TextEditingController();
-  var lnamecon =TextEditingController();
-  var unamecon=TextEditingController();
-  var numbcon=TextEditingController();
-  var phonecon=TextEditingController();
-  var Addresscon=TextEditingController();
-  var citycon =TextEditingController();
-  var biryhnum=TextEditingController();
+
 
   @override
   Widget build(BuildContext context) {
+    TextEditingController fnamecon =TextEditingController();
+    var emailcon=TextEditingController();
+    var passcon=TextEditingController();
+    var lnamecon =TextEditingController();
+    var unamecon=TextEditingController();
+    var numbcon=TextEditingController();
+    var phonecon=TextEditingController();
+    var Addresscon=TextEditingController();
+    var citycon =TextEditingController();
+    var biryhnum=TextEditingController();
+
     create: (BuildContext context) {
       return LoginCubit();
     };
@@ -125,7 +127,6 @@ class  SignUp_Screen extends StatelessWidget {
                         labelText: 'Password',
                         suffixIcon:GestureDetector(
                           onTap: (){
-
                             bo=!bo;},
                           child: Icon(bo ? Icons.visibility :Icons.visibility_off ),
                         ),
@@ -321,3 +322,4 @@ class  SignUp_Screen extends StatelessWidget {
     //var image = await ImagePicker().pickImage(source:ImageSource.camera);
   }
 }
+
