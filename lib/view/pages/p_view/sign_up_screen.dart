@@ -172,7 +172,7 @@ class SignUpScreen extends StatelessWidget {
                       TextFormField(
                         keyboardType: TextInputType.number,
 
-                        controller: number,
+                        controller: IdController,
                         decoration: InputDecoration(
 
                           labelText: 'National Id ',
@@ -202,6 +202,7 @@ class SignUpScreen extends StatelessWidget {
                       SizedBox(
                         height: 15.0,
                       ),
+
                       TextFormField(
                         controller: cityController,
 
@@ -217,21 +218,7 @@ class SignUpScreen extends StatelessWidget {
                         height: 15.0,
                       ),
                       TextFormField(
-                        controller: cityController,
-
-                        decoration: InputDecoration(
-
-                          labelText: 'Your City',
-
-
-                          border: OutlineInputBorder(),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 15.0,
-                      ),
-                      TextFormField(
-                        controller: countryController,
+                        controller:addressController,
 
                         decoration: InputDecoration(
                           hintText: 'Enter your Address',
@@ -246,6 +233,21 @@ class SignUpScreen extends StatelessWidget {
                       SizedBox(
                         height: 15.0,
                       ),
+                      TextFormField(
+                        keyboardType: TextInputType.text,
+                        controller: idCardImageController,
+
+                        decoration: InputDecoration(
+                          labelText: 'Id Card of the image',
+
+                          iconColor: Colors.indigo,
+
+                          border: OutlineInputBorder(),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 10.0,
+                      ),
                       Container(
 
                         // width: double.infinity,
@@ -255,6 +257,7 @@ class SignUpScreen extends StatelessWidget {
                           child: MaterialButton(onPressed: () {
                             var image = ImagePicker().pickImage(
                                 source: ImageSource.camera);
+                            imageController.dispose();
                           },
 
                             child: Text('Take your photo', style: TextStyle(
@@ -285,8 +288,11 @@ class SignUpScreen extends StatelessWidget {
                         child: login_eve_button(
                             function: () {
                               Navigator.pushReplacementNamed(context, 'login');
-                              //login.Login(email: email, pass: pass,context: context);
+                              SignUpCubit().get(context).signUpUse().then((value) {
+                                if(state is SignUpSuccessState){}
+                                else if(state is SignUpErrorState){}});
                             },
+
                             text: "Sign Up",
                             Text_color: Colors.white,
                             border_color: Colors.white,
@@ -305,9 +311,7 @@ class SignUpScreen extends StatelessWidget {
                           ),),
 
                           TextButton(onPressed: () {
-    SignUpCubit().get(context).signUpUse().then((value) {
-     if(state is SignUpSuccessState){}
-       else if(state is SignUpErrorState){}});
+
                             Navigator.pushReplacementNamed(context, 'login');
                           }, child: Text('click here ', style: TextStyle(
                               fontSize: 19.0

@@ -33,8 +33,8 @@ class SignUpCubit extends Cubit<SignUpStates>{
      emit(SignUpLoadingState());
 
     SignUpModel model = SignUpModel(
-        firstName: firstNameController.text,
-        lastName: lastNameController.text,
+        first_name: firstNameController.text,
+        last_name: lastNameController.text,
         email: email.text,
         password: passwordController.text,
         userName: userNameController.text,

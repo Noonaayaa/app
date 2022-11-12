@@ -1,8 +1,8 @@
 class SignUpModel {
 
   SignUpModel({
-    required this.firstName,
-    required this.lastName,
+    required this.first_name,
+    required this.last_name,
     required this.email,
     required this.password,
     required this.userName,
@@ -15,8 +15,8 @@ class SignUpModel {
     required this.birthdayDate,
   });
 
-  final String firstName;
-  final String lastName;
+  final String first_name;
+  final String last_name;
   final String email;
   final String password;
   final String userName;
@@ -29,8 +29,8 @@ class SignUpModel {
   final String birthdayDate;
 
   factory SignUpModel.fromMap(Map<String, dynamic> json) => SignUpModel(
-    firstName: json["firstName"],
-    lastName: json["lastName"],
+    first_name: json["first_name"],
+    last_name: json["last_name"],
     email: json["email"],
     password: json["password"],
     userName: json["user_name"],
@@ -45,8 +45,8 @@ class SignUpModel {
 
 
   Map<String, dynamic> toMap() => {
-    "firstname": firstName,
-    "lastname": lastName,
+    "firstname": first_name,
+    "lastname": last_name,
     "email": email,
     "password": password,
     "user_name": userName,
