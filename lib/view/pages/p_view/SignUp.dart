@@ -41,7 +41,7 @@ class  SignUp_Screen extends StatelessWidget {
       body:Stack(
 
         children: [
-          Image(image: NetworkImage('https://th.bing.com/th/id/R.d767980b8b6ebbef3890ddbf27db99e1?rik=0S40f%2feklqgOPw&pid=ImgRaw&r=0') ,),
+         // Image(image: NetworkImage('https://th.bing.com/th/id/R.d767980b8b6ebbef3890ddbf27db99e1?rik=0S40f%2feklqgOPw&pid=ImgRaw&r=0') ,),
           Padding(
 
             padding: const EdgeInsets.all(10.0),
@@ -275,6 +275,7 @@ class  SignUp_Screen extends StatelessWidget {
                       color: Colors.grey,
                       child: login_eve_button(
                           function: () {
+                            Navigator.pushReplacementNamed(context, 'login');
                             //login.Login(email: email, pass: pass,context: context);
                           },
                           text: "Sign Up",
@@ -282,7 +283,6 @@ class  SignUp_Screen extends StatelessWidget {
                           border_color: Colors.white,
                           button_color: HexColor("#625FC9")),
                     ),
-
                     SizedBox(
                       height: 10.0,
                     ),
