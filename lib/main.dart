@@ -6,6 +6,7 @@ import 'package:votando/view/pages/change_pass.dart';
 import 'package:votando/view/pages/code.dart';
 import 'package:votando/view/pages/login.dart';
 import 'package:votando/view/pages/otp.dart';
+import 'package:votando/view/pages/p_view/SignUp.dart';
 import 'package:votando/view/pages/p_view/p_view.dart';
 
 void main() async {
@@ -19,6 +20,7 @@ void main() async {
       'changepass':(context)=>change_pass(),
       'code':(context)=>code(),
       'otp':(context)=>Otp(),
+      'signUp':(context)=>SignUp_Screen()
     },
     debugShowCheckedModeBanner: false,
     home: p_view(),));

@@ -23,9 +23,6 @@ class LoginCubit extends Cubit<LoginState> {
   Login_model? user;
    String massage='';
 
-
-
-
   Future<void> Login(
   {required  TextEditingController email,
      required TextEditingController pass,

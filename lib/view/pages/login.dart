@@ -110,7 +110,9 @@ class login extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text("Don't Have An Account ?"),
-                            TextButton(onPressed: () {},
+                            TextButton(onPressed: () {
+                              Navigator.pushReplacementNamed(context, 'signUp');
+                            },
                               child: Text('Register', style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: HexColor("#625FC9"),
