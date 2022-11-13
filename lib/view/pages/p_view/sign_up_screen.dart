@@ -224,7 +224,9 @@ class SignUpScreen extends StatelessWidget {
                             decoration: const InputDecoration(
 
                               labelText: 'National Id',
-
+                              prefixIcon: Icon(
+                                Icons.numbers,
+                              ),
 
                               border: OutlineInputBorder(),
                             ),
@@ -268,7 +270,9 @@ class SignUpScreen extends StatelessWidget {
                             decoration: const InputDecoration(
 
                               labelText: 'Your City',
-
+                              prefixIcon: Icon(
+                                Icons.hail,
+                              ),
 
                               border: OutlineInputBorder(),
                             ),
@@ -297,26 +301,7 @@ class SignUpScreen extends StatelessWidget {
                           const SizedBox(
                             height: 15.0,
                           ),
-                          TextFormField(
-                            keyboardType: TextInputType.text,
-                            controller: cubit.idCardImageController,
-                            validator: (value){
-                              if(value!.isEmpty){
-                                return "this field is required";
-                              }
-                              return null;
-                            },
-                            decoration: const InputDecoration(
-                              labelText: 'Id Card of the image',
 
-                              iconColor: Colors.indigo,
-
-                              border: OutlineInputBorder(),
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 10.0,
-                          ),
 
                           Padding(
                             padding: const EdgeInsets.symmetric(
@@ -363,7 +348,7 @@ class SignUpScreen extends StatelessWidget {
                           ),
 
                           const SizedBox(
-                            height: 10.0,
+                            height: 5.0,
                           ),
 
                           const Text(
